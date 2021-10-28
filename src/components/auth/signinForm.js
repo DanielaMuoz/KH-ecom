@@ -30,33 +30,19 @@ class SigninForm extends Component {
       handleSubmit(event) {
         event.preventDefault()
         axios
-          .post(
-            "https://db-kh.herokuapp.com/login",
-            {
-              
-                email: this.state.email,
-                password: this.state.password
-              
-            }
-          )
-          .then(response => {
-            console.log(response.data.user_data.length)
-            if (response.data.user_data.length > 0) {
-              console.log("data") 
-              this.props.handleSuccessfulAuth();
-            }  
-            else {
-              this.setState({
-                errorText: "Wrong email or password"
-              });
-              this.props.handleUnsuccessfulAuth();
-            }
-          })
+        fetch("https://db-kh.herokuapp.com/user", {
+            method: "GET",
+            headers: { "content-type": "application/json" },
+           })
+        .then(response => response.json())
+        .then(data => {
+
+            
+        })
           .catch(error => {
             this.setState({
               errorText: "An error occurred"
-            });
-            this.props.handleUnsuccessfulAuth();
+            }); 
           });
     
     
@@ -110,7 +96,8 @@ class SigninForm extends Component {
                 </div>
  
                 <div className="signin-form__line"></div>
-                <button className="signin-form__login-button" type="submit" >Login</button>
+                
+                <button className="signin-form__login-button" type="submit"><Link to={`/home`}>Login</Link></button>
 
                 <div className="quicklinks">
                     <div className="quicklinks__title">QuickLinks</div>

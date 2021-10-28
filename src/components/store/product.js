@@ -12,7 +12,7 @@ class Product extends Component {
                 </div>
                 <div className="product__back back">
                     <h6 className="back__title">{product.title}</h6>
-                    <p className="back__description">{}</p>
+                    <p className="back__description">We provide the best experience for our customer.</p>
                     <div className="back__price">$1.99</div>
                     <div className="back__amount-box">1</div>
                     <div className="back__plus"><a className="fa">&#xf067;</a></div>
