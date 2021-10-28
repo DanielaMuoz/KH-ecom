@@ -80,16 +80,16 @@
             grid-row: 5/6;
             grid-column: 1/2;
             cursor: pointer; 
-                background-color: #821a9486; /* Green */
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block; 
-                border-radius: 15px; 
-                width: 500px;
-                height: 50px;
+            background-color: #821a9486; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block; 
+            border-radius: 15px; 
+            width: 500px;
+            height: 50px;
         }
         &__login-button:hover{
             font-size: 30px;
@@ -122,4 +122,3 @@
 
     }
 }
-
