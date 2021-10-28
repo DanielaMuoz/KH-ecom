@@ -1,0 +1,77 @@
+
+.shipping-address-form {
+
+    display: grid;
+    grid-template-columns: [inputs-s] 137px [back-e] 40px [input-overflow-s] 15px [input-overflow-e] 20px [zipcode-s] 200px [inputs-e] .7fr [details-s] 1fr [details-e]; 
+    grid-template-rows: repeat(7, 1fr);
+
+    input {
+        width: 100%;
+    }
+
+    &__title {
+        grid-row: 1;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__name {
+        grid-row: 2;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__email {
+        grid-row: 3;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__city {
+        grid-row: 4;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__state {
+        grid-row: 5;
+        grid-column: inputs-s/input-overflow-e;
+    }
+    &__zipcode {
+        grid-row: 5;
+        grid-column: zipcode-s/inputs-e;
+    }
+    &__line {
+        grid-row: 6;
+        grid-column: 1/-1;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    &__back {
+        grid-row: 7;
+        border-radius: 20px;
+        background-color: #999999;
+        grid-column: inputs-s/back-e;
+        height: 38px;
+    }
+    &__use-this-address {
+        grid-row: 7;
+        border-radius: 20px;
+        background-color: #00CB79;
+        grid-column: input-overflow-s/inputs-e;
+        height: 38px;
+    }
+    &__order-summary {
+        grid-row: 2;
+        grid-column: details-s/details-e;
+    }
+}
+
+.order-summary {
+    font-family: "Open Sans";
+    &__title {
+        color: #808080;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19px;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    &__products,
+    &__taxes-shipping,
+    &__total {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 250px;
+    } 
+}

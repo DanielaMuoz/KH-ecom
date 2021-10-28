@@ -1,0 +1,76 @@
+.payment-information-form {
+    display: grid;
+    grid-template-columns: [inputs-s] 137px [back-e] 40px [input-overflow-s] 15px [input-overflow-e] 20px [ccv-s] 200px [inputs-e] .7fr [details-s] 1fr [details-e]; 
+    grid-template-rows: repeat(7, 1fr);
+
+    &__title {
+        grid-row: 1;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__name-on-credit-card {
+        grid-row: 2;
+        grid-column: inputs-s/inputs-e;
+    }
+    &__credit-card-number {
+        grid-row: 3;
+        grid-column: inputs-s/inputs-e;
+    }
+
+    &__expiration-date {
+        grid-row: 4;
+        grid-column: inputs-s/input-overflow-e;
+    }
+    &__ccv {
+        grid-row: 4;
+        grid-column: ccv-s/inputs-e;
+    }
+
+
+    &__line {
+        grid-row: 6;
+        grid-column: 1/-1;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    &__back {
+        grid-row: 7;
+        border-radius: 20px;
+        background-color: #999999;
+        grid-column: inputs-s/back-e;
+        height: 38px;
+    }
+    &__pay-and-complete-order {
+        grid-row: 7;
+        border-radius: 20px;
+        background-color: #00CB79;
+        grid-column: input-overflow-s/inputs-e;
+        height: 38px;
+    }
+    &__order-summary {
+        grid-row: 2;
+        grid-column: details-s/details-e;
+    }
+    &__shipping-to {
+        grid-row: 4;
+        grid-column: details-s/details-e;
+    }
+}
+
+.shipping-to {
+    display: grid; 
+    grid-template-rows: [title-s] 1fr [title-e name-s] 1fr [name-e address-s] 1fr [address-e];
+    font-family: "Open Sans";
+    &__title {
+        grid-row: title-s/title-e;
+        color: #808080;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19px;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    &__name {
+        grid-row: name-s/name-e;
+    }
+    &__address {
+        grid-row: address-s/address-e;
+    }
+}

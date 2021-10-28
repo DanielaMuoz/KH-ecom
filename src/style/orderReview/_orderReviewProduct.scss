@@ -1,0 +1,19 @@
+.order-review-product {
+    display: grid;
+    grid-template-columns: [icon-s] 80px [icon-e] repeat(3, 1fr);
+
+    & > * {
+        display: grid;
+        align-items: center;
+    }
+
+    // &__name {
+
+    // }
+    // &__quanity {
+
+    // }
+    // &__price {
+
+    // }
+}

@@ -1,0 +1,78 @@
+.cart {
+    color: ghostwhite;
+    display: grid;
+    grid-template-rows: [toggle-s] 40px [toggle-e space-s] 15px [space-e body-s] 1fr [body-e];
+
+    height: 730px;
+    width: 520px;
+
+    &__toggle {
+        grid-row: toggle-s / toggle-e; 
+    }
+
+    &__body {
+        grid-row: body-s / body-e;
+        height: 675px;
+        width: 520px;
+        background-color: #333333;
+        box-shadow: -3px 20px 20px 0 rgba(0,0,0,0.2);
+        
+        display: grid;
+        grid-template-rows: [title-s] .2fr [title-e products-s] 1fr [products-e footer-s] .3fr [footer-e];
+        grid-template-columns: [space-one-s] .1fr [space-one-e body-s] 1fr [body-e space-two-s] .1fr [space-one-e];
+
+        &__title {
+            grid-row: title-s / title-e;
+            grid-column: body-s/body-e;
+        }
+
+        &__products {
+            // display: grid;
+            grid-row: products-s / products-e;
+            grid-column: body-s / body-e;
+
+            height: 480px;
+            width: 460px;
+            overflow-y: auto;
+            &__wrapper {
+                display: grid;
+                grid-row-gap: 45px;
+            }
+        }
+        &__footer {
+            background-color: #1A1A1A;
+            grid-row: footer-s / footer-e;
+            grid-column: body-s/body-e;
+
+            display: grid;
+            grid-template-columns: minmax(5px, 50px) [checkout-s] 1fr [checkout-e subtotal-s] 1fr [subtotal-e total-s] 46px minmax(5px, 30px);
+            align-items: center;
+
+            &__checkout {
+                grid-column: checkout-s / checkout-e;
+            }
+            &__subtotal {
+                grid-column: subtotal-s / subtotal-e;
+                justify-self: end;
+                margin-right: 10px;
+            }
+            &__total {
+                grid-column: total-s;
+            }
+        }
+    }
+
+
+}
+
+
+.cart__toggle {
+    display: grid;
+    justify-items: end;
+    align-items: center;
+}
+
+.cart__body__title {
+    display: grid;
+    align-items: center;
+}

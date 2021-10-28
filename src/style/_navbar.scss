@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #9030a1e5;
+    display: flex;
+    border-radius: 15px;
+
+    justify-content: center;
+
+    height: 50px;
+
+    & > * {
+        margin: 0 20px;
+    }
+}

@@ -1,0 +1,33 @@
+.header {
+    //background: skyblue;
+    justify-self: center;
+    height: 50px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 50px 50%;
+
+    justify-content: end;
+
+    .header-img img{
+       width: 50px;
+       transform: translate(25px); 
+    }
+    &__links { 
+        align-self: center;
+        justify-self: end;    
+    }
+
+    &__link {
+        font-weight: bold;
+        color: #821a9486;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold; 
+        margin: 0 10px;
+    } &__link:hover {
+        font-size: 25px; 
+        color: darkblue;
+      }
+ }
+

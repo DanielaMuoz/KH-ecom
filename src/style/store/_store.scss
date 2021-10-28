@@ -1,0 +1,7 @@
+.store {
+    // background-color: rgb(122, 255, 13);    
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 24px;
+}

@@ -1,0 +1,41 @@
+.App { 
+    margin-top: 22px;
+    font-size: 30px;
+    font-weight: "bold";
+    font-family: "Georgia, 'Times New Roman', Times, serif";
+    color: rgba(0, 0, 0, 0.664);
+
+    h1{
+        background-color: #821a9486;
+    }
+
+   a { 
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic; 
+        margin: 10px;
+        text-decoration: none; 
+    }
+
+    a:hover {
+        font-size: 35px;
+        color: red; 
+    }
+
+   // a.active {  
+
+   // }
+
+   body { 
+       background-image: url("http://www.solofondos.com/wp-content/uploads/2015/11/tableback.jpg"); 
+   }
+
+  .app p{
+    text-align: "center"; 
+    margin-top: "100px"; 
+    position: "fixed";  
+    font-weight: bold;
+    background-color: rgba(238, 130, 238, 0.562);
+   }
+
+}

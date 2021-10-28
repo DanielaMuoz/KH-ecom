@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+ 
+
+@import 'variables';
+@import 'base';
+@import 'home';
+@import 'app';
+
+@import 'header';
+@import 'navbar';
+@import 'searchBar';
+
+@import 'store/store';
+@import 'store/product';
+
+@import 'auth/signup';
+@import 'auth/signin';
+
+@import 'userInfo/details';
+@import 'userInfo/purchaseHistory';
+@import 'userInfo/accountInformation';
+
+@import 'cart/cart';
+@import 'cart/cartProduct';
+
+@import 'orderReview/orderReview';
+@import 'orderReview/orderReviewProduct';
+
+@import 'shippingAddress/shippingAddressForm';
+@import 'paymentInformation/paymentInformation';
+
+@import 'modal';

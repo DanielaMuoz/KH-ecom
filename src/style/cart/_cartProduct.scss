@@ -1,0 +1,51 @@
+.cart-product {
+    display: grid;
+
+    grid-template-columns: [icon-s] 165px [icon-e amount-box-s] 65px [amount-box-e plus-minus-s] 29px [plus-minus-e remove-s] 1fr [remove-e price-s] 50px [price-e];
+    grid-template-rows: [icon-s] 1fr [amount-box-s] 40px [amount-box-e icon-e];
+
+    &__image,
+    &__amount-box,
+    &__plus,
+    &__minus,
+    &__remove,
+    &__price {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__image {
+        grid-column: icon-s/icon-e;
+        grid-row: icon-s/icon-e;
+        margin-right: 35px;
+    }
+    &__title {
+        grid-column: amount-box-s / -1;
+    }
+    &__amount-box {
+        grid-column: amount-box-s / amount-box-e;
+        grid-row: amount-box-s / amount-box-e;
+    }
+    &__plus {
+        grid-column: plus-minus-s/plus-minus-e;
+        grid-row: amount-box-s;
+        align-self: start;
+        height: 20px;
+    }
+    &__minus {
+        grid-column: plus-minus-s/plus-minus-e;
+        grid-row: amount-box-s;
+        align-self: end;
+        height: 20px;
+    }
+    &__remove {
+        grid-column: remove-s/remove-e;
+        margin-left: 20px;
+        justify-items: start;
+    }
+    &__price {
+        grid-column: price-s/price-e;
+    }
+
+}
