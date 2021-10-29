@@ -49,3 +49,11 @@
     }
 
 }
+
+.product-wrapper{
+
+    h3{
+       display: grid;
+       grid-template-rows: 3fr;
+    }
+}

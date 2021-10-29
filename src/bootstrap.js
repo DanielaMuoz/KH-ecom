@@ -38,7 +38,7 @@ function main() {
          
           <Route path="/signup" component={Signup} />
           <Route path="/signin"  component={Signin} />
-          <Route path="/about-me" component={About} />
+          <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
 
 

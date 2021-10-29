@@ -1,7 +1,7 @@
 import React from "react";
 import profilePicture from "../../../static/assets/images/bio/headshot.jpg";
 
-export default function() {
+export const  About=()=> {
   return (
     <div className="content-page-wrapper">
       <div
@@ -34,4 +34,4 @@ export default function() {
     </div>
   );
 }
- 
+export default About;

@@ -43,12 +43,14 @@ class Home extends Component {
    
       {
         title: 'About',
-        callback: this.filterCategory
+        callback: this.filterCategory, 
+        path: '/about'
        
       },
       {
         title: 'Contact',
-        callback: this.filterCategory
+        callback: this.filterCategory,
+        path: '/contact'
       }    
     ]
    
