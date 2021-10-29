@@ -11,6 +11,7 @@ const createStoreWithMiddleware = applyMiddleware()(compose(window.devToolsExten
 // import 'bootstrap/dist/css/bootstrap.css';
 import "./style/main.scss";
 
+
 //installed components
 
 //our components
@@ -24,6 +25,8 @@ import UserInfo from "./components/userInfo/userInfo";
 import OrderReview from "./components/orderReview/orderReview";
 import ShippingAddress from "./components/shippingAddress/shippingAddress";
 import PaymentInformation from "./components/PaymentInformation/PaymentInformation";
+
+
 
 function main() {
   ReactDOM.render(

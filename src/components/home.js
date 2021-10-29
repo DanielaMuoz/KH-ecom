@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from './header';
 import Navbar from './navbar';
@@ -7,8 +8,8 @@ import Store from './store/store';
 import Cart from './cart/cart';
 import About from "./pages/about";
 import Contact from "./pages/contact";
-import { withRouter } from 'react-router';
-
+import { withRouter } from 'react-router'; 
+ 
 
 class Home extends Component {
 
@@ -37,35 +38,33 @@ class Home extends Component {
     ]
 
     const navbarActions = [
-      {
-        title: 'All',
-        callback: this.filterCategory
-      },
-      {
-        title: 'Flowers',
-        callback: this.filterCategory
-      },
+
+
+   
       {
         title: 'About',
         callback: this.filterCategory
-   
+       
       },
       {
         title: 'Contact',
         callback: this.filterCategory
-      },    
+      }    
     ]
-
+   
     return (
       <div className="home">
         <Header actions={actions}/>
         <Navbar actions={navbarActions}/>
         <SearchBar/>
         <Store/>
+       
+
+ 
         <Cart/>
       </div>
     );
   }
-}
+} 
 
 export default withRouter(Home);

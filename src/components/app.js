@@ -3,6 +3,15 @@ import { Carousel } from 'react-carousel-minimal';
 //import logo from './images/logo.png';
 import { withRouter } from "react-router";
   
+
+import { footer } from 'devcamp-js-footer';
+
+footer('Some Name');
+
+
+//import moment from 'moment';
+
+
 function App() { 
  const data = [
     {
@@ -53,6 +62,7 @@ function App() {
   }
   return (
     <div className="App"> 
+  
       <div style={{ textAlign: "center"}}>
         <h1>King of heavens</h1> 
         <a href="signin" style={{ textAlign: "center"}}>Go ahead</a> 
@@ -92,9 +102,14 @@ function App() {
              Our entire staff is dedicated to providing the highest level of customer service for your flower delivery.</p>
         </div>
       </div>
-    </div>
+    <div className="footermoment">
+     //var moment = require('moment');
+ 
+    //return "Copyright " + moment().format('YYYY') + " " + name + " All rights reserved";
+ 
+</div>    
+</div>
   );
 }
-
-
+ 
 export default withRouter(App);
