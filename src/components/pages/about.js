@@ -8,10 +8,13 @@ export const  About=()=> {
         className="left-column"
         style={{
           background: "url(" + profilePicture + ") no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "auto",
           backgroundPosition: "center"
         }}
       />
+      <div className="Links">
+        <a href="home">Come back!</a> 
+      </div>
       <div className="right-column">
         Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
         dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.

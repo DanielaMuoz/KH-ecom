@@ -1,15 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {contactPagePicture} from "../../../static/assets/images/logo.png";
+import contactPagePicture from "../../../static/assets/images/au/images.png";
 
-export default function() {
+export const  Contact=()=> {
   return (
     <div className="content-page-wrapper">
+ <div className="Links">
+        <a href="home">Come back!</a> 
+      </div>
       <div
         className="left-column"
         style={{
           background: "url(" + contactPagePicture + ") no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "",
           backgroundPosition: "center"
         }}
       />
@@ -44,3 +47,4 @@ export default function() {
   );
 }
 
+export default Contact;
