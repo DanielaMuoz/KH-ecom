@@ -7,6 +7,7 @@ import Store from './store/store';
 import Cart from './cart/cart';
 import About from "./pages/about";
 import Contact from "./pages/contact";
+import { withRouter } from 'react-router';
 
 
 class Home extends Component {
@@ -67,4 +68,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withRouter(Home);

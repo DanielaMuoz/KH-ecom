@@ -1,6 +1,7 @@
 import React from "react"; 
 import { Carousel } from 'react-carousel-minimal'; 
 //import logo from './images/logo.png';
+import { withRouter } from "react-router";
   
 function App() { 
  const data = [
@@ -54,7 +55,7 @@ function App() {
     <div className="App"> 
       <div style={{ textAlign: "center"}}>
         <h1>King of heavens</h1> 
-        <a href="home" style={{ textAlign: "center"}}>Go ahead</a> 
+        <a href="signin" style={{ textAlign: "center"}}>Go ahead</a> 
         <div style={{
           padding: "0 20px"
         }}>
@@ -96,4 +97,4 @@ function App() {
 }
 
 
-export default App;
+export default withRouter(App);

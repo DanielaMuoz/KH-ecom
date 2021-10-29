@@ -4,6 +4,7 @@ import CartProduct from './cartProduct';
 
 import { Link } from 'react-router-dom';
 
+
 class Cart extends Component {
     render() {
         return (
@@ -15,15 +16,12 @@ class Cart extends Component {
 
                 <div className="cart__body">
                     <div className="cart__body__title">
-                        Cart (4)
+                        Cart
                     </div>
                     <div className="cart__body__products">
                         <div className="cart__body__products__wrapper">
-                            <CartProduct/>
-                            <CartProduct/>
-                            <CartProduct/>
-                            <CartProduct/>
-                            <CartProduct/>
+                            <CartProduct/>  
+
                         </div>
                     </div>
                     <div className="cart__body__footer">

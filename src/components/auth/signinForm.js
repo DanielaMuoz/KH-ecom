@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom'; 
 import axios from "axios"
+import { useHistory } from 'react-router';
 
 class SigninForm extends Component {
-
+    
     constructor(props) {
         super(props);
           
@@ -18,6 +19,12 @@ class SigninForm extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
+    
+      navigate(){
+        const history=useHistory();
+        const navigateTo=()=>history.push("/home")
+      }
+      
       
     
       handleChange(event) {
@@ -29,20 +36,22 @@ class SigninForm extends Component {
     
       handleSubmit(event) {
         event.preventDefault()
-        axios
-        fetch("https://db-kh.herokuapp.com/user", {
-            method: "GET",
-            headers: { "content-type": "application/json" },
-           })
-        .then(response => response.json())
-        .then(data => {
-
-            
+        axios.post("https://db-kh.herokuapp.com/login", {email:this.state.email, password:this.state.password})
+        .then(response => {
+            console.log(response)
+            if(response.data.user_data.length > 0){
+                navigate()
+             
+            }else{
+                this.setState = {
+                    email: "",
+                    password: "",
+                    errorText: ""
+                  };
+            }
         })
-          .catch(error => {
-            this.setState({
-              errorText: "An error occurred"
-            }); 
+        .catch(error => {
+         
           });
     
     
@@ -97,7 +106,7 @@ class SigninForm extends Component {
  
                 <div className="signin-form__line"></div>
                 
-                <button className="signin-form__login-button" type="submit"><Link to={`/home`}>Login</Link></button>
+                <button className="signin-form__login-button" type="submit"></button>
 
                 <div className="quicklinks">
                     <div className="quicklinks__title">QuickLinks</div>
