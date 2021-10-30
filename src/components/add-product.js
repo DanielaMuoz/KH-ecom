@@ -44,7 +44,7 @@ export default class AddProduct extends Component {
         .then(response => response.json())
         .then(data => {
             if (data.id) {
-                this.props.history.push("/products")
+                this.props.history.push("/home")
             }
         })
         .catch(error => {

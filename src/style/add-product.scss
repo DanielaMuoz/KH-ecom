@@ -25,11 +25,36 @@
         }
 
         button {
-            height: 25px;
+                
+            margin-top: 20px;
+            margin-left: 10px;
+            justify-self: end;
+            grid-row: footer-s/footer-e;
+            cursor: pointer; 
+            height: 40px;
             width: 150px;
-            border: 1px solid black;
-            border-radius: 5px;
-            background-color: white;
+            border-radius: 20px;
+            color: white;
+            background-color: #0e688b86;
+            font-weight: 600;
+            font-size: 15px;
+    
+            display: grid;
+            justify-items: center;
+            align-items: center;
+    
+            transition: all .3s ease;
+    
+            &:hover {
+                transform: scale(0.97);
+                font-size: 15px;
+                color: rgb(39, 39, 95);
+            }
+    
+            &:active {
+                transform: scale(0.95);
+            }
+        
         }
     }
 }
