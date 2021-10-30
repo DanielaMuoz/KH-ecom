@@ -6,7 +6,7 @@ class Store extends Component {
   
   constructor(props) {
     super(props)
-     
+ 
     
     this.state = {
       products: [
@@ -30,21 +30,55 @@ class Store extends Component {
           imageUrl: "https://www.florespedia.com/Imagenes/lista-de-flores-bonitas-hortensias.jpg",
           title: "Hortensia"
         }
-      ]
+      ],
+      loading: true,
+      error: false
+  
     }
   }
+  componentDidMount() {
+      fetch("https://db-kh.herokuapp.com/products")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+          this.setState({
+              products: data,
+              loading: false
+          })
+      })
+      .catch(error => {
+          console.log("Error getting products ", error)
+          this.setState({
+              error: true,
+              loading: false
+          })
+      })
+  }
+  
+  renderProducts() {
+      const productsHtml = this.state.products.map(product => (
+          <div className="product-wrapper" key={product.id}>
+              <h1>{product.name}</h1>
+              <p>${product.price}</p>
+          </div>
+      ))
+  
+      return productsHtml
+  }
 
+/*
   renderProducts() {
     return this.state.products.map((product, index) => {
       return (
         <Product key={index} product={product}/>
       )
     })
-  }
+  }*/
 
   render() {
     return (
         <ul className="store">
+        <Product/>
           {this.renderProducts()}
         </ul>
     );

@@ -29,10 +29,7 @@ class OrderReview extends Component {
                         <label className="review-content__header__price">Price</label>
                     </div>
                     <div className="review-content__wrapper">
-                        <OrderReviewProduct/>
-                        <OrderReviewProduct/>
-                        <OrderReviewProduct/>
-                        <OrderReviewProduct/>
+                        <OrderReviewProduct/> 
                     </div>
                 </div>
                 <Link className="order-review__back" to="/">Back</Link>

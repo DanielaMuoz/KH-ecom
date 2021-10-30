@@ -30,12 +30,20 @@
        background-image: url("http://www.solofondos.com/wp-content/uploads/2015/11/tableback.jpg"); 
    }
 
-  .app p{
+  p{
     text-align: "center"; 
     margin-top: "100px"; 
     position: "fixed";  
     font-weight: bold;
-    background-color: rgba(238, 130, 238, 0.562);
-   }
+    background: red;
+  position: relative;
+  animation: mymove 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 700px; background-color: rgb(31, 185, 212);}
+}
 
 }

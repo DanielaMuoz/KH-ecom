@@ -2,11 +2,11 @@
     background-color: #9030a1e5;
     display: flex;
     border-radius: 15px;
-
+    font-size: 20px;
+    font-weight: bold; 
     justify-content: center;
-
     height: 50px;
-
+    font-family: 'Times New Roman', Times, serif; 
     & > * {
         margin: 0 20px;
     }

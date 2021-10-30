@@ -16,7 +16,7 @@ export const  About=()=> {
         <a href="home">Come back!</a> 
       </div>
       <div className="right-column">
-        Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
+       <p className="para">al Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
         dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.
         Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
         Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget
@@ -32,7 +32,7 @@ export const  About=()=> {
         commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis
         risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac
         consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis
-        euismod semper.
+        euismod semper.</p>
       </div>
     </div>
   );

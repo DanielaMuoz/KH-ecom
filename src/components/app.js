@@ -1,6 +1,5 @@
 import React from "react"; 
-import { Carousel } from 'react-carousel-minimal'; 
-//import logo from './images/logo.png';
+import { Carousel } from 'react-carousel-minimal';  
 import { withRouter } from "react-router";
   
 
@@ -95,19 +94,14 @@ function App() {
             }}
           /> 
           <p style={{
-              textAlign: "center", position: "fixed", marginTop: "100px", position: "fixed", fontSize: "22px", color: "black", fontWeight: "bold",}}>
+              textAlign: "center", position: "fixed", marginTop: "100px", position: "fixed", fontSize: "22px", color: "black", fontWeight: "bold"}}>
+ 
              The Internet Florist team is committed to providing you with the highest
              quality flowers, plants and gifts, at the fairest price possible. 
              Each client is very important to us and we strive with the most professional attention to each request. 
              Our entire staff is dedicated to providing the highest level of customer service for your flower delivery.</p>
         </div>
-      </div>
-    <div className="footermoment">
-     //var moment = require('moment');
- 
-    //return "Copyright " + moment().format('YYYY') + " " + name + " All rights reserved";
- 
-</div>    
+      </div> 
 </div>
   );
 }
