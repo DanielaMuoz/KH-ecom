@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom'; 
 import axios from "axios"
-import { useHistory } from 'react-router';
+import { Redirect, useHistory } from 'react-router';
 
 class SigninForm extends Component {
     
@@ -40,7 +40,7 @@ class SigninForm extends Component {
         .then(response => {
             console.log(response)
             if(response.data.user_data.length > 0){
-                navigate()
+               return <Redirect to ={"/"}></Redirect>
              
             }else{
                 this.setState = {
@@ -106,7 +106,9 @@ class SigninForm extends Component {
  
                 <div className="signin-form__line"></div>
                 
-                <button className="signin-form__login-button" type="submit"></button>
+                <button className="signin-form__login-button" type="submit">
+                    <Link to="/home">Login</Link> 
+                </button>
 
                 <div className="quicklinks">
                     <div className="quicklinks__title">QuickLinks</div>

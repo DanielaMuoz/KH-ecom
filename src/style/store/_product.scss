@@ -4,7 +4,7 @@
     grid-template-rows: 1/-1;
     grid-template-columns: 1/-1;
     margin-left: 10px;
-    background-color: rgba(0, 162, 255, 0.507);
+    background-color: #5785cf93;
 
     & > * {
         grid-row: 1/-1;
@@ -70,7 +70,7 @@
     height: 314px;
     width: 240px;
     background-color: white;
-    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.315);
 
     display: grid;
     grid-template-rows: 50px [title-s] 70px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px; 
@@ -112,7 +112,7 @@
         margin-left: 60px;
         justify-self: end;
         grid-row: footer-s/footer-e;
-
+        cursor: pointer; 
         height: 40px;
         width: 97px;
         border-radius: 20px;
@@ -162,8 +162,11 @@
 &__plus {
     grid-row: s/m;
     border-radius: 0 3px 0 0; 
+    cursor: pointer;
 }
 &__minus {
     grid-row: m/e;
-    border-radius: 0 0 3px 0;  
-}}
+    border-radius: 0 0 3px 0; 
+    cursor: pointer;
+ }
+}

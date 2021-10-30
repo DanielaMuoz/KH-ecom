@@ -78,12 +78,7 @@ class Store extends Component {
   render() {
     return (
         <ul className="store">
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-        <Product/>
-          {this.renderProducts()}
+        <Product/> 
         </ul>
     );
   }

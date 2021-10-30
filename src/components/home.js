@@ -5,9 +5,7 @@ import Header from './header';
 import Navbar from './navbar';
 import SearchBar from './searchBar';
 import Store from './store/store';
-import Cart from './cart/cart';
-import About from "./pages/about";
-import Contact from "./pages/contact";
+import Cart from './cart/cart'; 
 import { withRouter } from 'react-router'; 
  
 
@@ -38,9 +36,13 @@ class Home extends Component {
     ]
 
     const navbarActions = [
-
-
-   
+ 
+      {
+        title: 'Add product',
+        callback: this.filterCategory, 
+        path: '/add-product'
+       
+      },
       {
         title: 'About',
         callback: this.filterCategory, 

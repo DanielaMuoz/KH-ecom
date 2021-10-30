@@ -10,7 +10,7 @@ const createStoreWithMiddleware = applyMiddleware()(compose(window.devToolsExten
 
 // import 'bootstrap/dist/css/bootstrap.css';
 import "./style/main.scss";
-
+import Test from "./components/tes"
 
 //installed components
 
@@ -31,8 +31,8 @@ import PaymentInformation from "./components/PaymentInformation/PaymentInformati
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <BrowserRouter>
-        <Switch>
+       {/* <BrowserRouter>
+      <Switch>
           <Route path="/" exact component={App} />
           <Route path="/home" component={Home} />
          
@@ -47,7 +47,11 @@ function main() {
           <Route path="/shipping-address" component={ShippingAddress}/>
           <Route path="/payment-information" component={PaymentInformation}/>
           
-        </Switch>
+       </Switch>
+      </BrowserRouter>
+*/}
+      <BrowserRouter>
+        <Test />
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")

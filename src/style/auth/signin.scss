@@ -94,6 +94,7 @@
         &__login-button:hover{
             font-size: 30px;
             background-color: #821a94d2;
+            text-decoration: none;
         }
 
         .quicklinks {
@@ -118,7 +119,8 @@
             }
         }
 
-
-
-    }
+a{
+    text-decoration: none; 
+  } 
+ }
 }

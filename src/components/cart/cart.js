@@ -5,6 +5,7 @@ import CartProduct from './cartProduct';
 import { Link } from 'react-router-dom';
 
 
+
 class Cart extends Component {
     render() {
         return (
@@ -20,7 +21,7 @@ class Cart extends Component {
                     </div>
                     <div className="cart__body__products">
                         <div className="cart__body__products__wrapper">
-                            <CartProduct/>       
+                            <CartProduct/>             
                         </div>
                     </div>
                     <div className="cart__body__footer">

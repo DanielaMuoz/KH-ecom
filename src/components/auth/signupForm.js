@@ -125,7 +125,9 @@ class SignupForm extends Component {
                 </div>
                 <div className="signup-form__line"></div>
                 <Link className="signup-form__back" to="/signin">Back</Link>
-                <button className="signup-form__submit" type="submit">Create Account</button>
+                <button className="signup-form__submit" type="submit">
+                    <Link to="/home"> Create Account</Link>
+                </button>
 
                 <div className="password-requirements">
                     <div className="password-requirements__title">Password Requirements</div>

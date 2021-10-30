@@ -53,11 +53,11 @@ renderProducts() {
           {this.state.products.map(product => (
               <div className="product-wrapper" key={product.id}>
               <h1>{product.name}</h1>
-              <h3>${product.price.toFixed(2)}</h3>
-            </div>))}
+               
            <div className="cart-product__price">
-           
-          </div>
+           <h3>${product.price.toFixed(2)}</h3>
+          </div> 
+           </div>))}
           </div>
             <div className="cart-product__amount-box">1</div>
           <div className="cart-product__plus">
