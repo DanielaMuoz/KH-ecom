@@ -1,80 +1,169 @@
-
+// PLACE FRONT AND BACK ON TOP OF EACHOTHER
 .product {
-    position: relative;
-    height: 314px;
-    width: 240px;
+    display: grid;
+    grid-template-rows: 1/-1;
+    grid-template-columns: 1/-1;
+    margin-left: 10px;
+    background-color: rgba(0, 162, 255, 0.507);
 
-    align-self: center;
-    justify-self: center;
+    & > * {
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+    }
 
-    &__front {
-        opacity: 0;
-        display: grid;
-        justify-content: center;
-        grid-template-rows: 220px 20px;
-        grid-row-gap: 20px;
+    // SAME EFFECT BELOW
 
-       // img {
-          //  width: 5px;
-           // height: 5px;
-       // }
-        //label {
- 
-        //}
+    // &__front, 
+    // &__back {
+    //     grid-row: 1/-1;
+    //     grid-column: 1/-1;
+    // }
+}
+
+// CARD FLIP
+.product {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &__front, 
+    &__back {
+        backface-visibility: hidden;
+        transition: all .3s ease;
     }
 
     &__back {
-        height: 100%;
-        width: 100%;
+        transform: rotateY(-180deg);
+    }
 
-        background-color: skyblue;
-        position: absolute;
-        top: 0;
-        left: 0;
+    &:hover &__front {
+        transform: rotateY(180deg);
+    }
+    &:hover &__back {
+        transform: rotateY(0deg);
+    }
+    
+}
+
+.shop-product__front {
+    height: 314px;
+    width: 240px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    &__image {
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
+    height: 95%;
+    }
+    &__title {
+     
+    }
+
+
+}
+
+
+
+.shop-product__back {
+    height: 314px;
+    width: 240px;
+    background-color: white;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+
+    display: grid;
+    grid-template-rows: 50px [title-s] 70px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px; 
+    grid-template-columns: 15px [s] 1fr [e] 15px;
+    justify-items: center;
+    grid-row-gap: 7px;
+
+    & > * {
+        grid-column: s/e;
+    }
+
+    &__title {
+        grid-row: title-s/title-e;
+
+        color: #007acb;
+        font-family: "Encode Sans Condensed";
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__description {
+        grid-row: description-s/description-e;
+
+        font-size: 13px;
+        color: #333333;
+    }
+
+    &__price {
+        grid-row: price-s/price-e;
+    }
+
+    &__quantity {
+        grid-row: footer-s/footer-e;
+    }
+
+    &__add-to-cart {
+        
+        margin-top: 20px;
+        margin-left: 60px;
+        justify-self: end;
+        grid-row: footer-s/footer-e;
+
+        height: 40px;
+        width: 97px;
+        border-radius: 20px;
+        color: white;
+        background-color: #0e688b;
+        font-weight: 600;
+        font-size: 12px;
 
         display: grid;
-        grid-gap: 10px;
-        grid-template-rows: 20px 185px 32px 41px;
-        grid-template-columns: 65px 29px 97px;
         justify-items: center;
         align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
     }
+    
+}
+.product__back .back {
+&__amount-box,
+&__plus,
+&__minus {
+    border: 1px solid #E6E6E6;
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+    height: 21px;
+    width: 29px;
+    grid-column: m/e;
 }
 
-.back {
-    &__title {
-        grid-row: 1/2;
-        grid-column: 1/-1;
-    }
-    &__description {
-        grid-row: 2/3;
-        grid-column: 1/-1; 
-        display: flex;
-        justify-self: center;
-        justify-content: center;
-        align-items: center;
-    }
-    &__price {
-        grid-row: 3/4;
-        grid-column: 1/-1;
-        justify-self: start;
-    }
-    &__amount-box {
-        grid-row: 4;
-        grid-column: 1/2;
-    }
-    &__plus {
-        grid-row: 4;
-        grid-column: 2/3;
-        align-self: start;
-    }
-    &__minus {
-        grid-row: 4;
-        grid-column: 2/3;
-        align-self: end;
-    }
-    &__add-to-cart {
-        grid-row: 4;
-        grid-column: 3/-1;
-    }
+&__amount-box {
+    grid-row: s/e;
+    grid-column: s/m;
+    height: 42px;
+    width: 65px;
+    border-radius: 3px 0 0 3px;
+    font-size: 23px;
+    color: #333;
 }
+&__plus {
+    grid-row: s/m;
+    border-radius: 0 3px 0 0; 
+}
+&__minus {
+    grid-row: m/e;
+    border-radius: 0 0 3px 0;  
+}}

@@ -6,16 +6,19 @@ export const  About=()=> {
     <div className="content-page-wrapper">
       <div
         className="left-column"
-        style={{
-          background: "url(" + profilePicture + ") no-repeat",
-          backgroundSize: "auto",
-          backgroundPosition: "center"
+          style={{
+          background: "url(" + "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHx5YugOJfTOLaNfGTA7w0k0K8aDE1bvP8Q&usqp=CAU" + ") no-repeat",
+          backgroundSize: "center",
+          backgroundPosition: "center", 
+          marginTop: "70px",
+          marginLeft: "100px"
         }}
-      />
+      /> 
       <div className="Links">
         <a href="home">Come back!</a> 
-      </div>
+      </div> 
       <div className="right-column">
+      <h1>About</h1>
        <p className="para">al Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis
         dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.
         Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.

@@ -20,8 +20,7 @@ class Cart extends Component {
                     </div>
                     <div className="cart__body__products">
                         <div className="cart__body__products__wrapper">
-                            <CartProduct/>  
-
+                            <CartProduct/>       
                         </div>
                     </div>
                     <div className="cart__body__footer">

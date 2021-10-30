@@ -19,6 +19,9 @@ export const  Contact=()=> {
         </div>
         <div></div>
         <div className="right-column">
+      <h1 style={{
+            marginBottom: "15px"
+          }}>Contact:</h1>
           <div className="contact-bullet-points">
             <div className="bullet-point-group">
               <div className="icon">

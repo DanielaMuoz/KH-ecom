@@ -79,6 +79,10 @@ class Store extends Component {
     return (
         <ul className="store">
         <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
+        <Product/>
           {this.renderProducts()}
         </ul>
     );
