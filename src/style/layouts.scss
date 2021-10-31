@@ -7,8 +7,9 @@
 .content-page-wrapper {
   background-color: peachpuff;
   margin: 20px;
-    width: 90%;
+    width: 50%;
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - 84px);
   
@@ -43,7 +44,7 @@
     }
   }
 
-  .Links{
+  .Link{
     a { 
       margin-left: 200px;
       font-size: 24px;
@@ -51,7 +52,7 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-style: italic;
       color: rgb(136, 41, 72);
-      background-color: hotpink;
+      background-color: rgba(255, 105, 180, 0.404);
       border-radius: 5px;
   }
       a:hover{ 
@@ -60,12 +61,13 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-style: italic;
         color: rgb(69, 41, 136);
-        background-color: hotpink;
+        background-color: rgba(255, 105, 180, 0.295);
         border-radius: 5px; 
     }
   }
 
   .para{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
   }
+ 

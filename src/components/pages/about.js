@@ -8,13 +8,13 @@ export const  About=()=> {
         className="left-column"
           style={{
           background: "url(" + "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHx5YugOJfTOLaNfGTA7w0k0K8aDE1bvP8Q&usqp=CAU" + ") no-repeat",
-          backgroundSize: "center",
+          backgroundSize: "auto",
           backgroundPosition: "center", 
           marginTop: "70px",
           marginLeft: "100px"
         }}
       /> 
-      <div className="Links">
+      <div className="Link">
         <a href="home">Come back!</a> 
       </div> 
       <div className="right-column">

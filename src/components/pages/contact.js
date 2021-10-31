@@ -10,14 +10,14 @@ export const  Contact=()=> {
           style={{
             background: "url(" + contactPagePicture + ") no-repeat", 
             backgroundSize: "auto",
-            backgroundPosition: "center",
-            marginTop: "70px",
+            backgroundPosition: "end",
+            marginTop: "100px",
             marginLeft: "100px"
-          }}
-        /><div className="Links">
+          }}/>
+      <div className="Link">
         <a href="home">Come back!</a> 
         </div>
-        <div></div>
+       
         <div className="right-column">
       <h1 style={{
             marginBottom: "15px"

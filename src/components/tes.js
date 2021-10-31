@@ -7,6 +7,7 @@ import Home from "../components/home";
 import Signup from "../components/auth/signup";
 import Signin from "../components/auth/signin"; 
 import App from "../components/app"; 
+import Icons from "./helpers/icons";
 import About from "../components/pages/about";
 import Contact from "../components/pages/contact";
 import UserInfo from "../components/userInfo/userInfo";
@@ -18,7 +19,7 @@ export default class Test extends Component {
     constructor(props) {
         super(props);
 
-
+        Icons();
     }
 
 
