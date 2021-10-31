@@ -24,6 +24,13 @@
     &__title {
         grid-column: amount-box-s / -1;
     }
+    &__quantity {
+        grid-row: m/e;
+        grid-column: quantity-s/quantity-e;
+        .quantity__count {
+            color: white;
+        }
+    }
     &__amount-box {
         grid-column: amount-box-s / amount-box-e;
         grid-row: amount-box-s / amount-box-e;
@@ -47,8 +54,7 @@
     }
     &__price {
         grid-column: price-s/price-e;
-    }
-
+    } 
 }
 
 .product-wrapper{
@@ -58,7 +64,5 @@ justify-content: center;
        display: grid;
        grid-template-rows: 3fr;
     }
-} 
-.quantity__count {
-    color: white;
+ 
 }
