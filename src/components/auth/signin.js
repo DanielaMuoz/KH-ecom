@@ -15,7 +15,7 @@ class Signin extends Component {
     render() {
         const actions = [
             {
-                title: "Shop", path: "/home"
+               
             }
         ]
         return (
