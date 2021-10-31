@@ -59,12 +59,11 @@ renderProducts() {
         {this.state.products.map(product => (
           <div>
         <div className="product-wrapper" key={product.id}>
-            <h1>{product.name}</h1>
-            <p>${product.price.toFixed(2)}</p>
+         
         </div>
       <img className='cart-product__image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceSk7go39ITBpY-hozo_9o_4KEp6LAqbPng&usqp=CAU'/>
-      <div className='cart-product__title'>{name}</div>
-      <Quantity className='color' quantity={1}/>
+      <div className='cart-product__title'>{product.name}</div>
+      <Quantity className='cart-product__quantity' quantity={1}/>
       <a className='cart-product__remove'>Remove</a>
       <GreenPriceTag className='cart-product__price' title={product.price}/>
       </div>

@@ -20,7 +20,7 @@
         grid-row: icon-s/icon-e;
         margin-right: 35px;
         width: 75%;
-    }
+    } 
     &__title {
         grid-column: amount-box-s / -1;
     }
@@ -58,4 +58,7 @@ justify-content: center;
        display: grid;
        grid-template-rows: 3fr;
     }
+} 
+.quantity__count {
+    color: white;
 }
