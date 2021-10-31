@@ -13,7 +13,7 @@ import Contact from "../components/pages/contact";
 import UserInfo from "../components/userInfo/userInfo";
 import OrderReview from "../components/orderReview/orderReview";
 import ShippingAddress from "../components/shippingAddress/shippingAddress";
-import PaymentInformation from "../components/PaymentInformation/PaymentInformation";
+import PaymentInformation from "../components/PaymentInformation/paymentInformation";
 
 export default class Test extends Component {
     constructor(props) {
