@@ -1,9 +1,11 @@
 // PLACE FRONT AND BACK ON TOP OF EACHOTHER
 .product {
-    display: grid;
-    grid-template-rows: 1/-1;
-    grid-template-columns: 1/-1;
-    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+   // display: grid;
+   // grid-template-rows: 1/-1;
+   // grid-template-columns: 1/-1;
+   // margin-left: 10px;
     background-color: #5785cf93;
 
     & > * {
@@ -43,7 +45,10 @@
     }
     
 }
-
+.align_products{
+    display: flex;
+    align-content: space-between;
+}
 .shop-product__front {
     height: 314px;
     width: 240px;

@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'; 
 import { connect } from 'react-redux';
+
+import Quantity from '../quantity';
 
 class Product extends Component {
     constructor(props) {
@@ -55,9 +56,9 @@ class Product extends Component {
 
     render() {
         const product = this.props.product;
-
+        
         return (
-            <div>
+            <div className="align_products">
             {this.state.products.map(product => (
             <div className="product">
               
@@ -73,9 +74,7 @@ class Product extends Component {
                         </div>
                     <p className="back__description">We provide the best experience for our customer.</p>
                     <div className="back__price"><h3>${product.price.toFixed(2)}</h3></div>
-                    <div className="back__amount-box">1</div>
-                    <div className="back__plus"><a className="fa">&#xf067;</a></div>
-                    <div className="back__minus"><a className="fa">&#xf068;</a></div>
+                    <Quantity className='shop-product__back__quantity' quantity={1}/> 
                     <a onClick={this.handleAddToCart} className='shop-product__back__add-to-cart'>
                         Add to Cart
                     </a>

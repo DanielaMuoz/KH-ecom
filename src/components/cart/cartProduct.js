@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios"
 
+import Quantity from '../quantity';
+import GreenPriceTag from '../greenPriceTag';
+
+
 class CartProduct extends Component {
 
   constructor(props) {
@@ -44,32 +48,28 @@ renderProducts() {
 }
 
   render() {
+
+    console.log(this.props);
+    //const { className, product, quantity,price } = this.props;
+    //const { name, price } = product;
+    const { className } = this.props;
+
     return (
-      <div className="cart-wrapper">
-        <div className="cart-product">
-       
-          <img className="cart-product__image" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceSk7go39ITBpY-hozo_9o_4KEp6LAqbPng&usqp=CAU' />
-          <div className="cart-product__title">  
-          {this.state.products.map(product => (
-              <div className="product-wrapper" key={product.id}>
-              <h1>{product.name}</h1>
-               
-           <div className="cart-product__price">
-           <h3>${product.price.toFixed(2)}</h3>
-          </div> 
-           </div>))}
-          </div>
-            <div className="cart-product__amount-box">1</div>
-          <div className="cart-product__plus">
-            <a className="fa">&#xf067;</a>
-          </div>
-          <div className="cart-product__minus">
-            <a className="fa">&#xf068;</a>
-          </div>
-        <a className="cart-product__remove">Remove</a>
-       
+      <div className={`${className} cart-product`}>
+        {this.state.products.map(product => (
+          <div>
+        <div className="product-wrapper" key={product.id}>
+            <h1>{product.name}</h1>
+            <p>${product.price.toFixed(2)}</p>
         </div>
-        </div>
+      <img className='cart-product__image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceSk7go39ITBpY-hozo_9o_4KEp6LAqbPng&usqp=CAU'/>
+      <div className='cart-product__title'>{name}</div>
+      <Quantity className='color' quantity={1}/>
+      <a className='cart-product__remove'>Remove</a>
+      <GreenPriceTag className='cart-product__price' title={product.price}/>
+      </div>
+        ))}
+  </div>
         
     );
   }

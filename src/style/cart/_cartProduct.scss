@@ -52,7 +52,8 @@
 }
 
 .product-wrapper{
-
+display: flex;
+justify-content: center;
     h3{
        display: grid;
        grid-template-rows: 3fr;
