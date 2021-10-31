@@ -38,7 +38,7 @@ function App() {
       caption: "Dalias"
     },
     {
-      image: "https://www.florespedia.com/Minis/jacintos-rosas.jpg",
+      image: "https://t2.ev.ltmcdn.com/es/posts/7/1/8/cuidados_de_los_jacintos_2817_orig.jpg",
       caption: "Jacinto"
     },
     {
@@ -46,7 +46,7 @@ function App() {
       caption: "Cerezo"
     },
     {
-      image: "https://www.florespedia.com/Minis/nenufar.jpg",
+      image: "https://p4.wallpaperbetter.com/wallpaper/879/51/724/flowers-water-lily-earth-flower-wallpaper-preview.jpg",
       caption: "Nenufar"
     }
   ];
