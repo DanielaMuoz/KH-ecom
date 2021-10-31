@@ -15,6 +15,7 @@ import Test from "./components/tes"
 //installed components
 
 //our components
+/*
 import Home from "./components/home";
 import Signup from "./components/auth/signup";
 import Signin from "./components/auth/signin"; 
@@ -25,7 +26,7 @@ import UserInfo from "./components/userInfo/userInfo";
 import OrderReview from "./components/orderReview/orderReview";
 import ShippingAddress from "./components/shippingAddress/shippingAddress";
 import PaymentInformation from "./components/PaymentInformation/PaymentInformation";
-
+*/
 
 
 function main() {

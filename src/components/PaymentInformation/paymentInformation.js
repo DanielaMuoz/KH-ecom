@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from '../header';
 import Navbar from '../navbar';
 
-import PaymentInformationForm from './PaymentInformationForm';
+import PaymentInformationForm from './paymentInformationForm';
 
 class PaymentInformation extends Component {
 
