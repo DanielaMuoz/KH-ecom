@@ -36,28 +36,36 @@ class ShippingAddressForm extends Component {
             <form className="shipping-address-form" onSubmit={handleSubmit}>
                 <h1 className="shipping-address-form__title">Shipping Address</h1>
                 <div className="shipping-address-form__name">
-                    <label>Name</label>
-                    <Field name="name" type="text" component={this.renderInput}/>
+                    <label>Name:</label>
+                    <input 
+                    name="name"
+                    type="text" component={this.renderInput}  /> 
                 </div>
                 <div className="shipping-address-form__email">
-                    <label>Email</label>
-                    <Field name="email" type="email" component={this.renderInput}/>
+                    <label>Email:</label>
+                    <input 
+                    name="email"
+                    type="email" component={this.renderInput}  />  
                 </div>
                 <div className="shipping-address-form__city">
-                    <label>City</label>
-                    <Field name="city" type="city" component={this.renderInput}/>
-                </div>
-
+                    <label>City:</label>
+                    <input 
+                    name="city"
+                    type="city" component={this.renderInput}  />  
+                </div> 
                 <div className="shipping-address-form__state">
-                    <label>State</label>
-                    <Field name="state" type="state" component={this.renderInput}/>
+                    <label>State:</label>
+                    <input 
+                    name="state"
+                    type="state" component={this.renderInput}  />  
                 </div>
                 <div className="shipping-address-form__zipcode">
-                    <label>Zipcode</label>
-                    <Field name="zipcode" type="zipcode" component={this.renderInput}/>
+                    <label>Zipcode:</label>
+                    <input 
+                    name="zipcode"
+                    type="zipcode" component={this.renderInput}  />  
                 </div>
-                <div className="shipping-address-form__line"></div>
-
+                <div className="shipping-address-form__line"></div> 
                 <Link className="shipping-address-form__back" to="/order-review">Back</Link>
                 <a className="shipping-address-form__use-this-address" onClick={() => this.setState({ showModal: true })}>Use this Address</a>
 
@@ -68,11 +76,11 @@ class ShippingAddressForm extends Component {
                         <label>$7.96</label>
                     </div>
                     <div className="order-summary__taxes-shipping">
-                        <label>Taxes & Shipping</label>
+                        <label>Taxes & Shipping:</label>
                         <label>$0.16</label>
                     </div>
                     <div className="order-summary__total">
-                        <label>Total</label>
+                        <label>Total:</label>
                         <label>$8.02</label>
                     </div>
                 </div>
@@ -85,7 +93,7 @@ class ShippingAddressForm extends Component {
                         buttons = {
                             [
                                 <Link key={0} to="/payment-information"><button className="modal-box__save-address">Save Address</button></Link>,
-                                <Link key={1} to="/payment-information"><button className="modal-box__dont-save">Don't Save</button></Link>
+                                <Link key={1} to="/shipping-address"><button className="modal-box__dont-save">Don't Save</button></Link>
                             ]
                         }
                         onTapOutside={() => this.setState({ showModal: false })}

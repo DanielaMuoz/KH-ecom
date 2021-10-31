@@ -11,41 +11,41 @@ class CartProduct extends Component {
     super(props)
 
     this.state = {
-        products: [],
-        loading: true,
-        error: false
+      products: [],
+      loading: true,
+      error: false
     }
-}
+  }
 
-componentDidMount() {
+  componentDidMount() {
     fetch("https://db-kh.herokuapp.com/products")
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
         this.setState({
-            products: data,
-            loading: false
+          products: data,
+          loading: false
         })
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.log("Error getting products ", error)
         this.setState({
-            error: true,
-            loading: false
+          error: true,
+          loading: false
         })
-    })
-}
+      })
+  }
 
-renderProducts() {
+  renderProducts() {
     const productsHtml = this.state.products.map(product => (
-        <div className="product-wrapper" key={product.id}>
-            <h1>{product.name}</h1>
-            <p>${product.price.toFixed(2)}</p>
-        </div>
+      <div className="product-wrapper" key={product.id}>
+        <h1>{product.name}</h1>
+        <p>${product.price.toFixed(2)}</p>
+      </div>
     ))
 
     return productsHtml
-}
+  }
 
   render() {
 
@@ -57,19 +57,17 @@ renderProducts() {
     return (
       <div className={`${className} cart-product`}>
         {this.state.products.map(product => (
-          <div>
-        <div className="product-wrapper" key={product.id}>
+          <div className="test">
          
-        </div>
-      <img className='cart-product__image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceSk7go39ITBpY-hozo_9o_4KEp6LAqbPng&usqp=CAU'/>
-      <div className='cart-product__title'>{product.name}</div>
-      <Quantity className='cart-product__quantity'  quantity={1}/>
-      <a className='cart-product__remove'>Remove</a>
-      <GreenPriceTag className='cart-product__price' title={product.price}/>
-      </div>
+            <img className='cart-product__image' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTceSk7go39ITBpY-hozo_9o_4KEp6LAqbPng&usqp=CAU' />
+            <div className='cart-product__title'>{product.name}</div>
+            <Quantity className='cart-product__quantity' quantity={1} />
+            <a className='cart-product__remove'>Remove</a>
+            <GreenPriceTag className='cart-product__price' title={product.price} />
+          </div>
         ))}
-  </div>
-        
+      </div>
+
     );
   }
 }

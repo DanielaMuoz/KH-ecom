@@ -1,4 +1,5 @@
-.order-review {
+.order-review { 
+    font-weight: bold;
     display: grid;
     grid-template-rows: [header-nav-s] 50px 50px [header-nav-e title-s] 1fr [title-e content-s] 3fr [content-e bottom-s] 1fr [bottom-e];
     grid-template-columns: [back-s] 1fr [back-e proceed-s] 1.5fr [proceed-e cost-s] 2.5fr [cost-e];
@@ -6,8 +7,7 @@
     .header,
     .navbar {
         grid-column: 1/-1;    
-    }
-
+    } 
     &__title {
         grid-row: title-s/title-e;
         grid-column: 1/-1;
@@ -19,18 +19,31 @@
     &__back {
         grid-row: bottom-s/bottom-e;
         grid-column: back-s/back-e;
+        font-size: 20px;
+        font-weight: bold;
+        
     }
     &__proceed {
         grid-row: bottom-s/bottom-e;
         grid-column: proceed-s/proceed-e;
+        font-size: 20px;
+        font-weight: bold;
     }
+        a{
+            text-decoration: none;
+            color: rgb(74, 121, 175); 
+         }
+            a:hover{
+                font-size: 25px;
+            }
+    
     &__cost {
         grid-row: bottom-s/bottom-e;
         grid-column: cost-s/cost-e;
     }
 }
 
-.review-content {
+.review-content { 
     &__header {
         display: grid;
         grid-template-columns: [icon-s] 80px [icon-e] repeat(3, 1fr);
@@ -52,5 +65,5 @@
 }
 
 .review-cost {
-
+ 
 }

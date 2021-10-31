@@ -1,6 +1,4 @@
-.cart-product {
-    display: grid;
-
+.cart-product { 
     grid-template-columns: [icon-s] 165px [icon-e amount-box-s] 65px [amount-box-e plus-minus-s] 29px [plus-minus-e remove-s] 1fr [remove-e price-s] 50px [price-e];
     grid-template-rows: [icon-s] 1fr [amount-box-s] 40px [amount-box-e icon-e];
 
@@ -19,7 +17,7 @@
         grid-column: icon-s/icon-e;
         grid-row: icon-s/icon-e;
         margin-right: 35px;
-        width: 75%;
+        width: 50%;
     } 
     &__title {
         grid-column: amount-box-s / -1;
@@ -65,4 +63,9 @@ justify-content: center;
        grid-template-rows: 3fr;
     }
  
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,8 +1,8 @@
 .payment-information-form {
+    font-weight: bold;
     display: grid;
     grid-template-columns: [inputs-s] 137px [back-e] 40px [input-overflow-s] 15px [input-overflow-e] 20px [ccv-s] 200px [inputs-e] .7fr [details-s] 1fr [details-e]; 
-    grid-template-rows: repeat(7, 1fr);
-
+    grid-template-rows: repeat(7, 1fr); 
     &__title {
         grid-row: 1;
         grid-column: inputs-s/inputs-e;
@@ -34,16 +34,77 @@
     &__back {
         grid-row: 7;
         border-radius: 20px;
-        background-color: #999999;
+        background-color: #868585f6;
         grid-column: inputs-s/back-e;
-        height: 38px;
+        height: 38px; 
+
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-self: end;
+        grid-row: footer-s/footer-e;
+        cursor: pointer; 
+        height: 40px;
+        width: 200px;
+        border-radius: 20px;
+        color: white; 
+        font-weight: 600;
+        font-size: 15px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+            font-size: 15px;
+            color: rgb(39, 39, 95);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+     
     }
     &__pay-and-complete-order {
+        margin-top: 5px;
+        margin-left: 16px;
         grid-row: 7;
         border-radius: 20px;
-        background-color: #00CB79;
+        background-color: #0e688bd2;
         grid-column: input-overflow-s/inputs-e;
-        height: 38px;
+        height: 38px; 
+
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-self: end;
+        grid-row: footer-s/footer-e;
+        cursor: pointer; 
+        height: 40px;
+        width: 200px;
+        border-radius: 20px;
+        color: white; 
+        font-weight: 600;
+        font-size: 15px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+            font-size: 15px;
+            color: rgb(39, 39, 95);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+     
+
     }
     &__order-summary {
         grid-row: 2;

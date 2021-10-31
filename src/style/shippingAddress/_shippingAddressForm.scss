@@ -1,6 +1,6 @@
 
 .shipping-address-form {
-
+font-weight: bold;
     display: grid;
     grid-template-columns: [inputs-s] 137px [back-e] 40px [input-overflow-s] 15px [input-overflow-e] 20px [zipcode-s] 200px [inputs-e] .7fr [details-s] 1fr [details-e]; 
     grid-template-rows: repeat(7, 1fr);
@@ -41,16 +41,77 @@
     &__back {
         grid-row: 7;
         border-radius: 20px;
-        background-color: #999999;
+        background-color: #808080;
         grid-column: inputs-s/back-e;
         height: 38px;
-    }
+        
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-self: end;
+        grid-row: footer-s/footer-e;
+        cursor: pointer; 
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        color: white; 
+        font-weight: 600;
+        font-size: 15px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+            font-size: 15px;
+            color: rgb(39, 39, 95);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+     
+} 
     &__use-this-address {
         grid-row: 7;
         border-radius: 20px;
         background-color: #00CB79;
         grid-column: input-overflow-s/inputs-e;
         height: 38px;
+        
+        margin-top: 20px;
+        margin-left: 10px;
+        justify-self: end;
+        grid-row: footer-s/footer-e;
+        cursor: pointer; 
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        color: white;
+        background-color: #0e688bd2;
+        font-weight: 600;
+        font-size: 15px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        transition: all .3s ease;
+
+        &:hover {
+            transform: scale(0.97);
+            font-size: 15px;
+            color: rgb(39, 39, 95);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    
+    
+
     }
     &__order-summary {
         grid-row: 2;
@@ -74,4 +135,38 @@
         grid-template-columns: 1fr 1fr;
         width: 250px;
     } 
+}
+input , select{   
+    margin-top: 9px;
+    margin-left: 20px;
+    width: 100%;
+    height: 30px;  
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+}
+
+@mixin input {
+input {
+font-family: "Titillium Web", sans-serif;
+color: $charcoal;
+padding: 5px 0px;
+width: 100%;
+border-top: 0px;
+border-right: 0px;
+border-left: 0px;
+border-bottom: 1px solid $teal;
+background-color: transparent;
+transition: 0.5s all ease-in-out;
+font-size: 1.1em;
+margin-bottom: 21px;
+
+&:focus {
+outline: none;
+border-bottom: 1px solid $dark-teal;
+}
+}
 }
